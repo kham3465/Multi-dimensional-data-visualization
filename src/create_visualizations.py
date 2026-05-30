@@ -127,8 +127,11 @@ def plot_weather_scatter(df: pd.DataFrame, outdir: str) -> str:
     # 6. Custom legend for precipitation
     precip_vals = [0, df['precip'].max() * 0.2, df['precip'].max() * 0.5, df['precip'].max()]
     mapped_sizes = np.interp(precip_vals, [0, df['precip'].max()], size_range)
+    precip_max = df['precip'].max()
+    precip_vals = np.linspace(0, precip_max, 4)
+    mapped_sizes = np.interp(precip_vals, [0, precip_max], size_range)
     precip_handles = [plt.scatter([], [], s=s, color='gray', alpha=0.6) for s in mapped_sizes]
-    plt.legend(handles=precip_handles, labels=[f"{v:.1f}" for v in precip_vals],
+    plt.legend(handles=precip_handles, labels=[f"{v:g}" for v in precip_vals],
                loc="lower left", bbox_to_anchor=(1.02, 0.0), title="Precipitation")
 
     plt.xlabel("Average relative humidity (%)")
@@ -232,7 +235,7 @@ def main() -> List[str]:
     """Run all visualizations and return a list of generated file paths."""
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     data_dir = os.path.join(base_dir, "data")
-    out_dir = os.path.join(base_dir, "output")
+    out_dir = os.path.join(base_dir, "output_figures")
     ensure_output_dir(out_dir)
     figures: List[str] = []
 

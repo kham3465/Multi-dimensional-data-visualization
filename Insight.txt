@@ -1,0 +1,35 @@
+================================================================================
+PHÂN TÍCH CHI TIẾT CÁC BIỂU ĐỒ TRỰC QUAN HÓA DỮ LIỆU KHÍ HẬU
+================================================================================
+
+1. Biểu đồ Heatmap: Nhiệt độ trung bình hàng tháng theo thành phố (Weather Heatmap)
+--------------------------------------------------------------------------------
+- Sự phân hóa khí hậu: Các thành phố lục địa như Chicago và Bắc Kinh cho thấy biên độ nhiệt cực lớn giữa mùa đông và mùa hè (dao động từ gần 30°F đến hơn 80°F). Điều này phản ánh tính chất khắc nghiệt của khí hậu ôn đới lục địa.
+- Tính ổn định nhiệt đới: Mumbai và San Diego duy trì sắc đỏ (nhiệt độ cao) ổn định quanh năm. Đặc biệt, Mumbai gần như không có mùa đông lạnh, với nhiệt độ trung bình thấp nhất vẫn trên 70°F.
+- Hiện tượng đảo ngược mùa: Biểu đồ chỉ ra Auckland (New Zealand) có quy luật nhiệt độ ngược lại với phần còn lại của danh sách (thuộc Bắc bán cầu). Nhiệt độ thấp nhất của Auckland rơi vào tháng 7 và tháng 8 (mùa đông Nam bán cầu), trong khi tháng 1 và 2 là thời điểm ấm nhất.
+
+2. Biểu đồ Scatter Plot: Nhiệt độ, Độ ẩm và Lượng mưa (Weather Scatter Plot)
+--------------------------------------------------------------------------------
+- Phân cụm đặc trưng (Clustering): Mỗi thành phố tạo thành một "đám mây" dữ liệu riêng biệt. 
+  + Mumbai: Tập trung dày đặc ở góc trên bên phải (Nóng và Rất ẩm).
+  + Chicago: Trải dài theo đường chéo từ góc dưới bên trái (Lạnh và Khô) lên trên, cho thấy sự thay đổi độ ẩm tỷ lệ thuận với nhiệt độ theo mùa.
+- Tương quan Lượng mưa và Độ ẩm: Các điểm dữ liệu có kích thước lớn (lượng mưa cao) chủ yếu xuất hiện khi độ ẩm tương đối vượt ngưỡng 60%. Điều này chứng minh độ ẩm là điều kiện cần thiết cho các sự kiện mưa lớn tại các thành phố này.
+- Mật độ quan trắc: Biểu đồ cho thấy sự biến động hàng ngày của thời tiết. Các điểm rời rạc (outliers) của Chicago ở vùng nhiệt độ cực thấp phản ánh các đợt không khí lạnh đột ngột.
+
+3. Biểu đồ Heatmap: Dị thường nhiệt độ toàn cầu 1880-2025 (Global Temperature Anomalies)
+--------------------------------------------------------------------------------
+- Xu hướng ấm lên toàn cầu (Global Warming Trend): Đây là bằng chứng trực quan rõ nét nhất về biến đổi khí hậu. Biểu đồ chuyển đổi rõ rệt từ tông màu xanh (lạnh hơn mức trung bình 1951-1980) ở giai đoạn 1880-1940 sang tông màu đỏ đậm ở giai đoạn 1990-2025.
+- Sự gia tốc nhiệt độ: Từ năm 2010 trở đi, gần như toàn bộ các tháng trong năm đều có sắc đỏ rực, cho thấy dị thường nhiệt độ dương (> 1°C) diễn ra liên tục và không còn mang tính chu kỳ ngắn hạn.
+- Tính đồng nhất theo tháng: Sự ấm lên không chỉ xảy ra vào mùa hè mà diễn ra ở tất cả các tháng trong năm, cho thấy sự thay đổi mang tính hệ thống toàn cầu. Các năm gần đây như 2016, 2020 và 2023 nổi bật là những năm nóng kỷ lục.
+
+4. Biểu đồ Line Chart: Lượng mưa hàng tháng tại Minnesota 1927-1936 (Minnesota Precip Line)
+--------------------------------------------------------------------------------
+- Tính chu kỳ nông nghiệp: Biểu đồ hiển thị dạng "răng cưa" cực kỳ đều đặn. Lượng mưa luôn đạt đỉnh vào các tháng mùa hè (tháng 6-8) và thấp nhất vào mùa đông. Đây là yếu tố then chốt cho việc canh tác lúa mạch tại khu vực này.
+- Sự khác biệt địa phương: Mặc dù các địa điểm cùng nằm trong bang Minnesota, Waseca và St. Paul thường xuyên có các đỉnh mưa cao hơn (vượt mức 6-8 inch), trong khi Morris và Crookston có lượng mưa khiêm tốn hơn.
+- Biến động thập kỷ: Giai đoạn 1931-1934 cho thấy các đỉnh mưa thấp hơn so với các năm khác, có thể liên quan đến các chu kỳ hạn hán cục bộ trong lịch sử khí tượng Hoa Kỳ (Dust Bowl era).
+- Dữ liệu khuyết thiếu: Khoảng trống của đường Duluth vào cuối năm 1931 phản ánh sự gián đoạn trong việc ghi chép dữ liệu lịch sử tại trạm này.
+
+================================================================================
+Kết luận chung:
+Dữ liệu cho thấy sự kết hợp chặt chẽ giữa các quy luật tự nhiên (chu kỳ mùa, vị trí địa lý) và các tác động dài hạn của biến đổi khí hậu (nóng lên toàn cầu). Việc kết hợp nhiều chiều dữ liệu (màu sắc, kích thước, thời gian) giúp làm nổi bật các mối quan hệ phức tạp mà bảng số liệu thô không thể thể hiện.
+================================================================================
